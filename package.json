@@ -12,6 +12,9 @@
   },
   "author": "Truong Duong",
   "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1"
+  },
   "bugs": {
     "url": "https://github.com/Truong-Duong/Note-Taker/issues"
   },
