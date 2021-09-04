@@ -55,7 +55,9 @@ You haven’t learned how to handle DELETE requests, but this application has th
 * `DELETE /api/notes/:id` should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
 ## Installation
+npm init
 npm install
+node server.js
 
 ## Usage
 https://drive.google.com/file/d/1gBTfMn5mSLf7Mb_mAvnIbyoNy4kK3EF4/view
@@ -87,7 +89,7 @@ SOFTWARE.
 Truong Duong - https://github.com/Truong-Duong
 
 ## Tests
-![](./pubic/img/1.png)
+![](./public/img/1.png)
 
 ## Questions
 You can get in touch with me through:
