@@ -5,7 +5,7 @@ const fs = require("fs");
 const { v4: uuidv4 } = require("uuid"); //npm library to give unique id's easily
 
 // Housekeeping, setup express server, set port number
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3006;
 const app = express();
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
