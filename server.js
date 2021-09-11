@@ -2,12 +2,11 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const util = require("util");
+const { v4: uuidv4 } = require("uuid"); //npm library to give unique id's easily
 
 // Housekeeping, setup express server, set port number
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 3001;
 const app = express();
-
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,7 +15,6 @@ app.use(express.json());
 app.get("/notes", (req, res) =>
     res.sendFile(path.join(__dirname, "public/notes.html"))
 );
-
 app.get("/", (req, res) =>
     res.sendFile(path.join(__dirname, "public/index.html"))
 );
@@ -27,22 +25,18 @@ app.get("/api/notes", (req, res) => {
         if (err) throw err;
         const notes = JSON.parse(data);
         res.json(notes);
-    });
+     });
 });
 
 app.post("/api/notes", (req, res) => {
     newNote = req.body;
     newNote.id = uuidv4();
-
     let notes = fs.readFileSync("public/db/db.json");
-  
     notes = JSON.parse(notes);
     notes.push(newNote);
-  
     fs.writeFile("public/db/db.json", JSON.stringify(notes), function (err) {
         if (err) throw err;
     });
-    
     res.json(notes);
 });
 

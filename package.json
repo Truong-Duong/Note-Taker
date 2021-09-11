@@ -1,22 +1,25 @@
 {
-  "name": "note-taker",
+  "name": "Note-Taker",
   "version": "1.0.0",
   "description": "Create a website that the user can take note by using express.js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Truong-Duong/Note-Taker.git"
   },
-  "author": "Truong Duong",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "4.17.1"
-  },
   "bugs": {
     "url": "https://github.com/Truong-Duong/Note-Taker/issues"
   },
-  "homepage": "https://github.com/Truong-Duong/Note-Taker#readme"
+  "homepage": "https://github.com/Truong-Duong/Note-Taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
 }
